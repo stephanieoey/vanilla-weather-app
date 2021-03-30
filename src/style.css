@@ -1,3 +1,159 @@
+body {
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+  padding: 20px;
+}
+
 h1 {
-  color: blue;
+  margin-top: 60px;
+  color: #272044;
+  font-weight: 900;
+  text-align: center;
+  font-size: 34px;
+  line-height: 48px;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+  text-align: center;
+  padding: 50px 10px 10px;
+}
+
+h2.current-temperature {
+  font-size: 48px;
+}
+
+.card .card-body {
+  display: block;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+.card {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+    url("https://images.pexels.com/photos/3837464/pexels-photo-3837464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600&w=1260") !important;
+  background-position: right 20px bottom 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  color: #ffffff;
+  border-color: #ffffff !important;
+}
+
+form {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.location-search {
+  border-radius: 4px;
+  background-color: #ffffff;
+  opacity: 70%;
+  height: 40px;
+  border-color: #ffffff;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+}
+
+button {
+  background-color: #f0848d !important;
+  color: #ffffff !important;
+}
+
+button:hover {
+  opacity: 80%;
+}
+
+.city-card {
+  background-color: rgba(255, 255, 255, 0.3);
+  display: block;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.city-text {
+  display: block;
+  padding: 20px;
+}
+
+.details {
+  display: block;
+  margin: 20px;
+}
+
+.current-city {
+  font-size: 36px;
+  position: relative;
+  top: 15px;
+}
+
+.current-weather-icon {
+  font-size: 100px;
+  position: relative;
+  left: -40px;
+  top: 10px;
+}
+
+.current-weather {
+  font-size: 24px;
+  position: relative;
+  right: -40px;
+}
+
+.temperature {
+  font-size: 60px;
+}
+
+.units {
+  font-size: 16px;
+  position: relative;
+  top: -24px;
+}
+
+.units a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.units a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.details-text {
+  display: block;
+  padding: 20px;
+}
+
+.upcoming-weather {
+  text-align: center;
+}
+
+.upcoming-weather-icon {
+  font-size: 60px;
+}
+
+.built-by a {
+  color: white;
+}
+
+.built-by a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.open-source a {
+  color: rgb(59, 59, 59);
+}
+
+.open-source a:hover {
+  color: rgba(59, 59, 59, 0.7);
 }
