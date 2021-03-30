@@ -1,4 +1,42 @@
-// Week 5 Attempt 2
+// Live Date with Timezones
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December"
+];
+
+let day = days[now.getDay()];
+let month = months[now.getMonth()];
+let date = now.getDate();
+let hours = now.getHours();
+let minutes = now.getMinutes();
+    if (minutes < 10) {
+    minutes = `0${minutes}`;
+    }
+let year = now.getFullYear();
+
+return `${day}</br>${month} ${date}, ${year}</br></br>${hours}:${minutes}`
+}
 
 // Show typed city and temp
 function showWeather(response) {
@@ -14,6 +52,9 @@ function showWeather(response) {
   );
   document.querySelector(".current-weather").innerHTML = (
     response.data.weather[0].main
+  );
+  document.querySelector("#date").innerHTML = formatDate(
+      response.data.dt * 1000
   );
 }
 
@@ -89,6 +130,9 @@ let month = months[now.getMonth()];
 let date = now.getDate();
 let hours = now.getHours();
 let minutes = now.getMinutes();
+    if (minutes < 10) {
+        minutes = `0${minutes}`;
+        }
 let year = now.getFullYear();
 
 h4.innerHTML = `${day}</br>${month} ${date}, ${year}</br></br>${hours}:${minutes}`;
