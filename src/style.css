@@ -148,8 +148,25 @@ button:hover {
   text-align: center;
 }
 
+#weather-forecast {
+  text-align: center;
+}
+
 .upcoming-weather-icon {
   font-size: 60px;
+}
+
+.weather-forecast-date {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
 
 .built-by a {
