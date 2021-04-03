@@ -121,12 +121,22 @@ button:hover {
 }
 
 .units a {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 
 .units a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.units .active {
+  color: white;
+  cursor: default;
+}
+
+.units .active:hover {
+  color: white;
+  cursor: default;
 }
 
 .details-text {
