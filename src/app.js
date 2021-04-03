@@ -1,3 +1,27 @@
+// Upcoming Forecast
+function displayForecast () {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecastHTML = 
+  forecastHTML + 
+  `  
+    <div class="col-2">
+        <div class="weather-forecast-date">Mon</div>
+          <img src="http://openweathermap.org/img/wn/10d@2x.png" width="80" />
+          <div class="weather-forecast-temperatures">
+              <span class="weather-forecast-temperature-max">18°</span>
+              |
+              <span class="weather-forecast-temperature-min">12°</span>
+          </div>
+      </div>
+  `;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
 // Live Date with Timezones
 function formatDate(timestamp) {
   let now = new Date(timestamp);
@@ -62,7 +86,7 @@ function showWeather(response) {
   );
 
   celsiusTemperature = response.data.main.temp;
-
+  
 }
 
 let iconElement = document.querySelector("#icon");
@@ -71,7 +95,6 @@ let iconElement = document.querySelector("#icon");
 
 
 // unit Conversion
-
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".current-temperature");

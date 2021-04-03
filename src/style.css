@@ -29,10 +29,11 @@ h2.current-temperature {
   font-size: 48px;
 }
 
-.card .card-body {
+.card-body {
   display: block;
   margin: 0 auto;
   color: #ffffff;
+  width: 100%;
 }
 
 .card {
