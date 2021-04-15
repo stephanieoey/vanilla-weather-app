@@ -1,7 +1,10 @@
 // Upcoming Forecast
-function displayForecast () {
-  let forecastElement = document.querySelector("#weather-forecast");
+function displayForecast (response) {
 
+  
+
+  let forecastElement = document.querySelector("#weather-forecast");
+  
   let forecastHTML = `<div class="row">`;
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   days.forEach(function (day) {
@@ -24,6 +27,17 @@ function displayForecast () {
 }
 
 displayForecast();
+
+// Upcoming Forecast
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "ec14959303adc32d6b3da00379b9b626";
+  let units = "metric";
+  let apiURL =
+  `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`
+  axios.get(apiURL).then(displayForecast);
+}
 
 // Live Date with Timezones
 function formatDate(timestamp) {
@@ -90,6 +104,10 @@ function showWeather(response) {
 
   celsiusTemperature = response.data.main.temp;
   
+  // Upcoming Forecast
+
+  getForecast(response.data.coord);
+
 }
 
 let iconElement = document.querySelector("#icon");
