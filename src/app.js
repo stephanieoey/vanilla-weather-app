@@ -38,10 +38,6 @@ function displayForecast (response) {
 }
 
 
-// displayForecast();
-
-// NOTES: For some reason when activating displayForecast(), weather icons do not show. but that is what shows the forecast with the old function?
-
 // Upcoming Forecast
 
 function getForecast(coordinates) {
@@ -129,32 +125,32 @@ let iconElement = document.querySelector("#icon");
 
 
 // unit Conversion
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".current-temperature");
+// function displayFahrenheitTemperature(event) {
+//   event.preventDefault();
+//   let temperatureElement = document.querySelector(".current-temperature");
 
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
+//   celsiusLink.classList.remove("active");
+//   fahrenheitLink.classList.add("active");
+//   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+//   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+// }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-let celsiusTemperature = null;
+// let celsiusTemperature = null;
 
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
+// function displayCelsiusTemperature(event) {
+//   event.preventDefault();
 
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector(".current-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
+//   celsiusLink.classList.add("active");
+//   fahrenheitLink.classList.remove("active");
+//   let temperatureElement = document.querySelector(".current-temperature");
+//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+// }
 
 // Search city
 function searchCity(city) {
